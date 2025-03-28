@@ -107,37 +107,56 @@ C = B × log₂(1 + SNR)
 SNR_lineal = 10^(20 / 10) = 100
 
 **Sustitución en la fórmula de Shannon:**
-C = 500 × 10⁶ × log₂(1 + 100) = 500 × 10⁶ × log₂(101)
-
-➡️ *Calcular log₂(101) y luego multiplicar por 500 × 10⁶ para obtener C en bps.*
+C = 500 × 10⁶ × log₂(1 + 100) = 500 × 10⁶ × log₂(101) = 3.33 × 10^9
 
 ---
 
-### Pregunta 8: Ubicación de Portadoras
+### Pregunta 8: Ubicación de Portadoras para Eficiencia Espectral
 
 **Datos:**
-- Primera portadora: 1.2 GHz
-- Ancho de banda por canal: 300 MHz
+- Frecuencia de la primera portadora: 1.2 GHz  
+- Ancho de banda por canal (en banda base): 300 MHz
+
+---
 
 **a) Frecuencia de la portadora anterior:**
+
+Para obtener la portadora anterior, restamos el ancho de banda:
+
 1.2 GHz - 0.3 GHz = 0.9 GHz
 
+**Resultado:**  
+La frecuencia de la portadora anterior es **0.9 GHz**.
+
 **b) Frecuencia de la portadora posterior:**
+
+Para la siguiente portadora, sumamos el ancho de banda:
 1.2 GHz + 0.3 GHz = 1.5 GHz
+
+**Resultado:**  
+La frecuencia de la portadora posterior es **1.5 GHz**.
+
+---
+
+**Justificación:**
+
+La ubicación de las portadoras en un sistema de comunicación determina cómo se distribuyen los canales dentro del espectro disponible. Para lograr **eficiencia espectral**, es necesario que las portadoras estén espaciadas justo lo suficiente para que sus bandas no se solapen (lo que causaría interferencias), pero sin dejar huecos innecesarios entre ellas (lo que desperdiciaría ancho de banda).
+
+En este caso, el uso de una separación igual al ancho de banda de cada canal (300 MHz) entre portadoras permite utilizar el espectro de forma continua y ordenada, asegurando que no haya interferencias ni espacio desperdiciado. Este método es clave en sistemas como OFDM y multiplexación por división de frecuencia (FDM), donde cada portadora transmite información de manera independiente.
 
 ---
 
 ### Pregunta 9: Modulación y BER
 
 **Ordenar de mayor a menor robustez ante el ruido:**
-1. BPSK
-2. QPSK
-3. 16-QAM
-4. 64-QAM
-5. 256-QAM
+1. **BPSK** – Modulación binaria, con solo 2 símbolos. Es la más robusta ante interferencias.
+2. **QPSK** – Usa 4 símbolos. Doble eficiencia que BPSK, pero ligeramente menos robusta.
+3. **16-QAM** – Usa 16 símbolos. Mejora la eficiencia, pero es más sensible al ruido.
+4. **64-QAM** – Usa 64 símbolos. Mayor velocidad, menor tolerancia al ruido.
+5. **256-QAM** – Usa 256 símbolos. Muy eficiente, pero la más sensible a errores por ruido.
 
 **Justificación:**  
-A mayor número de símbolos por baudio, mayor eficiencia espectral, pero menor tolerancia al ruido. Las modulaciones con constelaciones más grandes son más sensibles a interferencias.
+A medida que aumentamos el número de símbolos en la constelación (mayor orden de modulación), se mejora la eficiencia espectral, pero los símbolos quedan más cerca unos de otros, por lo que la modulación se vuelve más vulnerable al ruido y errores de transmisión.
 
 ---
 
@@ -187,9 +206,7 @@ Eficiencia (%) = (Datos útiles / Total transmitido) × 100
 - Total transmitido: 5 tramas × 1000 bytes = 5000 bytes
 
 **Sustitución:**
-Eficiencia = (1536 / 5000) × 100 = ? %
-
-➡️ *Realizar la división y multiplicar por 100 para obtener la eficiencia.*
+Eficiencia = (1536 / 5000) × 100 = 30.72%
 
 
 
