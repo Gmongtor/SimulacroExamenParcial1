@@ -1,4 +1,3 @@
-# SimulacroExamenParcial1
 # Simulacro Examen Parcial 1 - Redes [Curso 2024/2025]
 
 ## Parte I: Conceptos y Teoría
