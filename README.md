@@ -97,15 +97,19 @@ Inverso al anterior, se eliminan las cabeceras hasta entregar los datos a la apl
 ### Pregunta 7: Tasa de Transmisión Máxima (Shannon)
 
 **Fórmula:**
+C = B × log₂(1 + SNR)
 
 **Datos:**
-- Ancho de banda: B = 500 MHz
-- SNR (en dB): 20 dB
+- Ancho de banda: B = 500 MHz = 500 × 10⁶ Hz  
+- Relación señal/ruido en dB: SNR_dB = 20 dB
 
+**Conversión de SNR a escala lineal:**
+SNR_lineal = 10^(20 / 10) = 100
 
-**Conversión:**
+**Sustitución en la fórmula de Shannon:**
+C = 500 × 10⁶ × log₂(1 + 100) = 500 × 10⁶ × log₂(101)
 
-**Sustituir en la fórmula de Shannon y dejar expresado sin calcular.**
+➡️ *Calcular log₂(101) y luego multiplicar por 500 × 10⁶ para obtener C en bps.*
 
 ---
 
@@ -115,52 +119,79 @@ Inverso al anterior, se eliminan las cabeceras hasta entregar los datos a la apl
 - Primera portadora: 1.2 GHz
 - Ancho de banda por canal: 300 MHz
 
-**a)** Portadora anterior:
+**a) Frecuencia de la portadora anterior:**
+1.2 GHz - 0.3 GHz = 0.9 GHz
 
-**b)** Portadora posterior:
-
-**Importancia:** La separación adecuada de portadoras evita interferencias y mejora la eficiencia espectral.
+**b) Frecuencia de la portadora posterior:**
+1.2 GHz + 0.3 GHz = 1.5 GHz
 
 ---
 
 ### Pregunta 9: Modulación y BER
 
 **Ordenar de mayor a menor robustez ante el ruido:**
-- BPSK
-- QPSK
-- 16-QAM
-- 64-QAM
-- 256-QAM
+1. BPSK
+2. QPSK
+3. 16-QAM
+4. 64-QAM
+5. 256-QAM
 
-**Justificación:** A mayor número de símbolos por baudio, mayor eficiencia pero menor tolerancia al ruido.
+**Justificación:**  
+A mayor número de símbolos por baudio, mayor eficiencia espectral, pero menor tolerancia al ruido. Las modulaciones con constelaciones más grandes son más sensibles a interferencias.
 
 ---
 
-### Pregunta 10: Eficiencia del Sistema de Encapsulamiento
+### Pregunta 10: Encapsulamiento y Eficiencia
+
+#### a) Tamaño total del mensaje
 
 **Datos:**
-- Capa 5: bloque de 1.5 KB = 1536 bytes
-- Capas 4 y 3: +40 bytes cada una
-- Capa 2: Máximo 400 bytes por trama
-- Capa 1: Por cada 2 bytes, se añaden:
-  - 1 byte de inicio
-  - 1 byte de parada
-  - 1 byte de CRC
+- Bloque de datos de Capa 5: 1.5 KB = 1536 bytes
+- Cabeceras: Capa 4 → +40 bytes, Capa 3 → +40 bytes
+
+**Sustitución:**
+Tamaño total = 1536 + 40 + 40 = 1616 bytes
 
 ---
 
-**a) Tamaño del mensaje:**
+#### b) Número de tramas necesarias
+
+**Máximo por trama (Capa 2):** 400 bytes
+
+**Cálculo:**
+Número de tramas = ceil(1616 / 400) = ceil(4.04) = 5 tramas
 
 ---
 
-**b) Número de tramas necesarias:**
+#### c) Sobrecarga por trama en Capa 1
+
+**Capa 1 añade por cada 2 bytes:**
+- 1 byte de inicio
+- 1 byte de parada
+- 1 byte de CRC
+
+**Pasos:**
+- Segmentos de 2 bytes por trama: 400 / 2 = 200
+- Sobrecarga total por trama: 200 × 3 = 600 bytes
+- Total por trama transmitida: 400 + 600 = 1000 bytes
 
 ---
 
-**c) Sobrecarga por trama en capa 1:**
+#### d) Eficiencia del sistema
 
----
+**Fórmula:**
+Eficiencia (%) = (Datos útiles / Total transmitido) × 100
 
-**d) Eficiencia del sistema:**
+**Datos:**
+- Datos útiles: 1536 bytes
+- Total transmitido: 5 tramas × 1000 bytes = 5000 bytes
 
----
+**Sustitución:**
+Eficiencia = (1536 / 5000) × 100 = ? %
+
+➡️ *Realizar la división y multiplicar por 100 para obtener la eficiencia.*
+
+
+
+
+
