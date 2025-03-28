@@ -22,7 +22,9 @@ https://github.com/Gmongtor/SimulacroExamenParcial1.git
 - **Modelo TCP/IP**
   - Ventajas: Usado en Internet, más simple y funcional.
   - Limitaciones: Menor separación de funciones, menos formal.
-    ![_- visual selection](https://github.com/user-attachments/assets/78f6e33e-c07e-42ce-b6be-e49bbeb8cced)
+
+
+![_- visual selection](https://github.com/user-attachments/assets/78f6e33e-c07e-42ce-b6be-e49bbeb8cced)
 
 
 ---
