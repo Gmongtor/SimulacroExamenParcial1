@@ -99,8 +99,9 @@ Inverso al anterior, se eliminan las cabeceras hasta entregar los datos a la apl
 **Fórmula:**
 
 **Datos:**
-- Ancho de banda \( B = 500 \, \text{MHz} \)
-- SNR (en dB) = 20
+- Ancho de banda: B = 500 MHz
+- SNR (en dB): 20 dB
+
 
 **Conversión:**
 
