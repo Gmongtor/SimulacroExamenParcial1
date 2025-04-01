@@ -45,17 +45,8 @@ https://github.com/Gmongtor/SimulacroExamenParcial1.git
   - TCP (conexión, fiable)
   - UDP (sin conexión, no fiable)
  
-    Funciones y Protocolos de la Capa de Transporte
-Segmentación y Reensamblado
-Control de Flujo y Congestión
-Ubicación de la Capa de Transporte
-Funciones Principales
-Detección y Corrección de Errores
-¿Garantía de Entrega?
-Sí
-TCP
-No
-UDP
+![Función de la Capa de Transporte - visual selection](https://github.com/user-attachments/assets/80fff4ca-f3b9-4d7f-a495-ba8d13a67800)
+
 
 ---
 
