@@ -44,6 +44,18 @@ https://github.com/Gmongtor/SimulacroExamenParcial1.git
 - **Protocolos comunes**:
   - TCP (conexión, fiable)
   - UDP (sin conexión, no fiable)
+ 
+    Funciones y Protocolos de la Capa de Transporte
+Segmentación y Reensamblado
+Control de Flujo y Congestión
+Ubicación de la Capa de Transporte
+Funciones Principales
+Detección y Corrección de Errores
+¿Garantía de Entrega?
+Sí
+TCP
+No
+UDP
 
 ---
 
