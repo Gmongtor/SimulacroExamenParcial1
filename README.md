@@ -52,13 +52,42 @@ https://github.com/Gmongtor/SimulacroExamenParcial1.git
 
 ### Pregunta 3: Comparación entre TCP y UDP
 
-| Característica            | TCP                                | UDP                             |
-|---------------------------|-------------------------------------|----------------------------------|
-| Orientación               | A conexión                          | Sin conexión                     |
-| Fiabilidad                | Alta (ACK, control de errores)      | Baja                             |
-| Orden de entrega          | Garantizado                         | No garantizado                   |
-| Velocidad                 | Más lento                           | Más rápido                       |
-| Aplicaciones típicas      | Web, email, FTP, SSH                | Streaming, VoIP, juegos online   |
+Comparación entre TCP y UDP
+
+
+
+Este documento presenta una comparación entre dos de los protocolos de comunicación más utilizados en redes: TCP (Protocolo de Control de Transmisión) y UDP (Protocolo de Datagramas de Usuario). A través de una tabla que resume sus características clave, se busca ofrecer una visión clara de las diferencias fundamentales entre ambos protocolos, así como sus aplicaciones típicas.
+
+
+
+| Característica       | TCP                          | UDP                       |
+
+|----------------------|------------------------------|---------------------------|
+
+| Orientación      | A conexión                   | Sin conexión               |
+
+| Fiabilidad       | Alta (ACK, control de errores) | Baja                      |
+
+| Orden de entrega | Garantizado                  | No garantizado            |
+
+| Velocidad        | Más lento                    | Más rápido                |
+
+| Aplicaciones típicas | Web, email, FTP, SSH     | Streaming, VoIP, juegos online |
+
+
+
+TCP es un protocolo orientado a la conexión, lo que significa que establece una conexión antes de enviar datos y garantiza la entrega de los mismos a través de mecanismos de confirmación (ACK) y control de errores. Esto lo hace ideal para aplicaciones donde la fiabilidad es crucial, como en la navegación web, el correo electrónico y la transferencia de archivos.
+
+
+
+Por otro lado, UDP es un protocolo sin conexión que no garantiza la entrega de los datos ni el orden en que llegan. Esto lo hace más rápido y eficiente, lo que lo convierte en la opción preferida para aplicaciones que requieren velocidad y pueden tolerar cierta pérdida de datos, como el streaming de video, las llamadas VoIP y los juegos en línea.
+
+
+
+En resumen, la elección entre TCP y UDP depende de las necesidades específicas de la aplicación en cuestión, ya sea priorizando la fiabilidad o la velocidad.
+
+![Comparación entre TCP y UDP - visual selection](https://github.com/user-attachments/assets/50cf00b5-fa2b-4fc5-91b5-422479dd6435)
+
 
 ---
 
